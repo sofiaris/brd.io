@@ -1,0 +1,135 @@
+:root {
+    --gold: #e8d5b5; /* اللون الذهبي الملكي */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* تأكد أن صورة الخلفية موجودة ومسمية background.jpg */
+    background: url('gemy.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ستايل البطاقة الزجاجية */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(232, 213, 181, 0.2);
+    padding: 50px;
+    border-radius: 20px;
+    width: 450px;
+    margin-left: 80px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* ستايل العناوين بالذهبي */
+.main-title {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-title span {
+    font-size: 1.8rem;
+    opacity: 0.9;
+    display: block;
+    margin-top: 5px;
+}
+
+.message, .signature {
+    color: var(--gold);
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+/* التاريخ والعمر ف الجنب */
+.side-info {
+    position: absolute;
+    right: 70px;
+    bottom: 20%;
+    text-align: center;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    z-index: 10;
+}
+
+.date {
+    font-size: 2rem;
+    letter-spacing: 6px;
+    display: block;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.age {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 0.9;
+    display: block;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* أيقونة الموسيقى الفوق */
+.music-icon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--gold);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.music-icon:hover {
+    background: rgba(232, 213, 181, 0.2);
+    transform: scale(1.1);
+}
+
+/* حاوية الورد */
+#petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.petal {
+    position: absolute;
+    background-color: #ffb7c5; /* لون وردي للورد */
+    border-radius: 150% 0 150% 0;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}

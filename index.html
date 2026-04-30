@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday for My Princess</title>
+    <!-- استيراد الخطوط الملكية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- حاوية تساقط الورد -->
+    <div id="petals-container"></div>
+
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- أيقونة الموسيقى -->
+    <div class="music-icon" onclick="playMusic()">
+        <span class="note">♪</span>
+    </div>
+
+    <!-- التاريخ والعمر (الجهة اليمنى) -->
+    <div class="side-info">
+        <span class="date">MAY 1</span>
+        <span class="age">21</span>
+    </div>
+
+    <!-- البطاقة الزجاجية (الجهة اليسرى) -->
+    <div class="glass-card">
+        <h1 class="main-title">Happy Birthday, <br><span>my love</span></h1>
+        <p class="message">I wish you happiness and success in your life and studies.</p>
+        <p class="signature">I love you so much, my princess</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
